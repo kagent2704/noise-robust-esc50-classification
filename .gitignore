@@ -6,8 +6,8 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# ESC-50 is distributed separately and is not committed here.
-data/ESC-50/
+# Locally downloaded archives remain excluded. ESC-50 itself is linked as a
+# Git submodule at data/ESC-50 so its license and upstream history stay intact.
 data/*.zip
 
 # Large generated caches and model checkpoints.

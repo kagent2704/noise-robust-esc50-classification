@@ -1,0 +1,4 @@
+[submodule "data/ESC-50"]
+	path = data/ESC-50
+	url = https://github.com/karolpiczak/ESC-50.git
+	shallow = true

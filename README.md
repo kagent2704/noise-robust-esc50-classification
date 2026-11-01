@@ -22,6 +22,8 @@ YAMNet with SVM performed best at every tested condition and achieved the highes
 
 ```text
 noise-robust-esc50-classification/
+├── data/
+│   └── ESC-50/              # official dataset Git submodule
 ├── notebooks/
 │   ├── 01_mfcc_svm.ipynb
 │   ├── 02_spectrogram_cnn.ipynb
@@ -42,19 +44,31 @@ noise-robust-esc50-classification/
 └── .gitignore
 ```
 
-Only concise metrics, tables, and final figures are committed. The ESC-50 audio, virtual environments, feature caches, embeddings, trained models, intermediate Word reports, and QA renders are intentionally excluded.
+Only concise metrics, tables, and final figures are stored directly in this repository. ESC-50 is linked from its official repository as a Git submodule, while virtual environments, feature caches, embeddings, trained models, intermediate Word reports, and QA renders are excluded.
 
 ## Dataset
 
 [ESC-50](https://github.com/karolpiczak/ESC-50) contains 2,000 five-second recordings from 50 balanced environmental sound classes. The dataset supplies five official folds and is licensed separately under CC BY-NC 3.0.
 
-### Download on Windows
+### Clone with the dataset
+
+```powershell
+git clone --recurse-submodules https://github.com/kagent2704/noise-robust-esc50-classification.git
+```
+
+For an existing clone:
+
+```powershell
+git submodule update --init --recursive --depth 1
+```
+
+### Alternative Windows download
 
 ```powershell
 .\scripts\download_dataset.ps1
 ```
 
-The expected dataset location is `data/ESC-50`.
+Both methods place the dataset at `data/ESC-50`, which is the path expected by the local notebooks. The dataset remains governed by its upstream CC BY-NC 3.0 license.
 
 ## Environment
 
