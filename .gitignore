@@ -1,0 +1,26 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# ESC-50 is distributed separately and is not committed here.
+data/ESC-50/
+data/*.zip
+
+# Large generated caches and model checkpoints.
+outputs/
+*.npz
+*.joblib
+*.pt
+*.pth
+*.h5
+*.keras
+
+# Local QA and editor artifacts.
+qa_*/
+docx_qa*/
+.vscode/
+

@@ -1,0 +1,6 @@
+fold,feature_selection__k,svm__C,svm__gamma
+1,80,30.0,0.01
+2,80,10.0,scale
+3,80,100.0,0.01
+4,80,10.0,scale
+5,80,30.0,scale
